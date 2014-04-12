@@ -1,0 +1,13 @@
+var http = require('http');
+
+var options = {
+  host: 'localhos',
+  port: 8080,
+  path: '/hello/Jackson'
+};
+
+http.get(options, function(res) {
+  console.log("Got response: " + JSON.stringify(res.headers));
+}).on('error', function(e) {
+  console.log("Got error: " + e.message);
+});
